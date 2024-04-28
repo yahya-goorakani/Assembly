@@ -30,9 +30,9 @@ program.exe
 4. The message "Hello, my name is GOOYA" will be displayed on the console.
 
 ## Files
-- `filename.asm`: Assembly code file.
-- `filename.obj`: Object file generated after assembling.
-- `filename.exe`: Executable file generated after linking.
+- `program.asm`: Assembly code file.
+- `program.obj`: Object file generated after assembling.
+- `program.exe`: Executable file generated after linking.
 
 ## Additional Notes
 - This program is designed to run on DOS or an environment that supports DOS interrupts.
