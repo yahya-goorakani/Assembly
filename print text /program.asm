@@ -1,7 +1,7 @@
 .model small
 .stack 100h
 .data
-Massage DB 'Hello, my name is yahya' ,13,10,'$'
+Massage DB 'Hello, my name is GOOYA' ,13,10,'$'
 .code
 Hello Proc
 mov ax, @data
