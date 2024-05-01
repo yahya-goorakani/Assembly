@@ -1,37 +1,46 @@
-# Assembly Language Program Readme
+# Assembly Code README
 
-This assembly language program takes two input values, computes the expression \(a - 2b\), and displays the result in decimal format.
+This assembly code is designed to calculate the value of `c` according to the formula `c := a - 2 * b`.
 
-## Program Overview
+## Overview
+
+- `a`, `b`, and `c` are defined as bytes in the data segment.
+- The program displays the result of the calculation along with a message indicating what the result represents.
+- It also includes newline characters for formatting.
+- The program then exits.
+
+## Code Explanation
 
 ### Data Segment
-- `msg`: Prompt to enter value for 'a'.
-- `msg1`: Prompt to enter value for 'b'.
-- `result`: Message to display the result.
+- `a`, `b`, and `c` are defined as bytes to hold numerical values.
+- `result_msg` holds the message that will be displayed along with the calculated result.
+- `newline` contains newline characters for formatting.
 
 ### Code Segment
-1. **Initialization**: Initializes the data segment and sets up necessary variables.
-2. **Input 'a'**: Prompts user to enter value for 'a' and reads the input.
-3. **Input 'b'**: Prompts user to enter value for 'b' and reads the input.
-4. **Compute**: Computes the expression \(a - 2b\).
-5. **Display Result**: Displays the result in decimal format.
+- The program begins by setting up the data segment.
+- It moves the value of `a` into the `AL` register.
+- The value of `b` is moved into the `AH` register.
+- The program then doubles the value of `b` by adding `AH` to itself.
+- It subtracts the doubled value of `b` (stored in `AH`) from `AL`.
+- The result (`AL`) is stored in `c`.
+- Next, it displays the result message using DOS interrupt `21h` with function `09h`.
+- Then, it converts the numerical value of `c` to ASCII and prints it.
+- After printing the result, it prints newline characters for formatting.
+- Finally, it exits the program using DOS interrupt `21h` with function `4Ch`.
 
-### Subroutines
-- `readNumber`: Reads a single digit and converts it to binary.
-- `DecimalConv`: Converts the result to a decimal string.
+## Running the Program
 
-## How to Use
-1. Assemble and link the program using an appropriate assembler and linker.
-2. Run the executable.
-3. Follow the prompts to enter values for 'a' and 'b'.
-4. The program will display the result of the expression \(a - 2b\) in decimal format.
+To run the program:
+1. Assemble the code using an assembler like TASM or NASM.
+2. Link the object file to create an executable.
+3. Execute the generated executable.
 
-## Additional Notes
-- Ensure proper termination of the program after displaying the result.
-- The program assumes a valid input within the range of single digits.
+## Expected Output
 
-## Files
-- `program.asm`: Assembly language source code.
-- `readme.md`: This documentation file.
+The program should display the result of the calculation `c := a - 2 * b` along with the message "The result is:", followed by a newline character.
 
-Feel free to customize and integrate this code into your projects!
+## Example
+
+For the provided data (`a = 9`, `b = 3`), the expected output would be:
+
+
