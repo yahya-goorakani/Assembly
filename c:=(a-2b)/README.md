@@ -41,6 +41,6 @@ The program should display the result of the calculation `c := a - 2 * b` along 
 
 ## Example
 
-For the provided data (`a = 9`, `b = 3`), the expected output would be:
+For the provided data (`a = 9`, `b = 3`), the expected output would be: 3
 
 
